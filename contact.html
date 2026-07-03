@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Secure Company Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Consistent header layout -->
+    <header class="navbar">
+        <div class="logo">
+            <strong>Secure<span>Corp</span></strong>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn-login-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="contact-page-main">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <p>Send a message to our DevSecOps security and support team.</p>
+
+            <!-- Error/Success Message box (initially empty) -->
+            <div id="contact-feedback" class="feedback-message hidden"></div>
+
+            <!-- Contact Form -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name</label>
+                    <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-email">Email Address</label>
+                    <input type="email" id="contact-email" name="email" placeholder="john.doe@company.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-message">Your Message</label>
+                    <textarea id="contact-message" name="message" rows="5" placeholder="Write your feedback or questions here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Consistent Footer layout -->
+    <footer>
+        <p>&copy; 2026 SecureCorp. All rights reserved. Designed for secure enterprise environments.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

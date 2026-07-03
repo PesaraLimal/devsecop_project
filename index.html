@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- This is an HTML comment. The browser ignores it. We use comments to explain our code. -->
+<!-- <!DOCTYPE html> tells the web browser that this is a modern HTML5 document. -->
+<html lang="en">
+<head>
+    <!-- The <head> section contains "metadata" (information about the page that doesn't show directly as content). -->
+    
+    <!-- charset="UTF-8" tells the browser to use the standard character set for text (supports almost all languages and symbols). -->
+    <meta charset="UTF-8">
+    
+    <!-- viewport meta tag makes sure our website looks good and scales correctly on mobile devices (Responsive Design). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title tag defines what is written on the browser tab. -->
+    <title>Home - Secure Company Portal</title>
+    
+    <!-- Link tag connects this HTML file to our external styling file (CSS). -->
+    <!-- rel="stylesheet" tells the browser that style.css is a style sheet. -->
+    <!-- href specifies the path to style.css. Since it is in the same folder, we just write "style.css". -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- We import Google Fonts to make our text look professional and modern. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- The <body> contains the actual visible content of the page. -->
+
+    <!-- Header section: Typically contains logo and main navigation. -->
+    <header class="navbar">
+        <div class="logo">
+            <!-- A simple text-based logo representing our company. -->
+            <strong>Secure<span>Corp</span></strong>
+        </div>
+        
+        <!-- Navigation bar (<nav>): Contains links to other pages. -->
+        <nav>
+            <ul>
+                <!-- "active" class marks the page the user is currently visiting. -->
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- We style the Login link as a button to draw attention. -->
+                <li><a href="login.html" class="btn-login-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area (<main>): Holds the primary content unique to this page. -->
+    <main>
+        <!-- Hero Section: The big, eye-catching banner at the top of a landing page. -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to SecureCorp</h1>
+                <p>Your trusted partner in cybersecurity, cloud infrastructure, and enterprise DevOps automation.</p>
+                <div class="hero-buttons">
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    <a href="login.html" class="btn btn-primary">Access Secure Portal</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature/Services Section: Explains what we do using visual "cards". -->
+        <section class="features">
+            <h2>Our Core Pillars</h2>
+            <div class="feature-grid">
+                <!-- Feature Card 1 -->
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>DevSecOps Security</h3>
+                    <p>We integrate advanced security directly into the software development life cycle, automating compliance checks and vulnerability scans.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Automated Pipelines</h3>
+                    <p>Speed up deployment cycles with continuous integration and continuous delivery (CI/CD) pipelines built for high efficiency.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Modernized, scalable, and highly available cloud environment design, leveraging AWS and infrastructure as code (IaC).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer: Stays at the bottom of the page, showing copyright and utility links. -->
+    <footer>
+        <p>&copy; 2026 SecureCorp. All rights reserved. Designed for secure enterprise environments.</p>
+    </footer>
+
+    <!-- JavaScript script link: Connects page logic. -->
+    <!-- Placing it at the bottom ensures the page layout loads first before running any scripts. -->
+    <script src="script.js"></script>
+</body>
+</html>

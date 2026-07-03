@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login - Secure Company Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Consistent header layout -->
+    <header class="navbar">
+        <div class="logo">
+            <strong>Secure<span>Corp</span></strong>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="active btn-login-nav">Portal Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="login-page-main">
+        <div class="login-container">
+            <h2>Secure Portal Access</h2>
+            <p>Please enter your enterprise credentials to access the secure internal dashboard.</p>
+
+            <!-- Error/Success Message box (initially empty) -->
+            <!-- JavaScript will use this container to show feedback to the user. -->
+            <div id="login-feedback" class="feedback-message hidden"></div>
+
+            <!-- Login Form -->
+            <!-- We add an ID to reference it in our script.js file. -->
+            <form id="login-form">
+                <!-- Grouping inputs for style control -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <!-- "required" tag is built-in HTML5 validation ensuring the field is not empty. -->
+                    <input type="text" id="username" name="username" placeholder="e.g., admin" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <!-- Submit button triggers the form's submit event. -->
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+            
+            <p class="login-note"><strong>Demo Notice:</strong> Use username <code>admin</code> and password <code>1234</code> to access the portal.</p>
+        </div>
+    </main>
+
+    <!-- Consistent Footer layout -->
+    <footer>
+        <p>&copy; 2026 SecureCorp. All rights reserved. Designed for secure enterprise environments.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
