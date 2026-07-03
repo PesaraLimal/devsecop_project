@@ -1,20 +1,32 @@
-name: CI-CD Pipeline
+name: Secure CI-CD Pipeline
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
-  build:
+  security-build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build Docker image
+      # 1. Secrets Scan
+      - name: Gitleaks Scan
+        uses: zricethezav/gitleaks-action@v2
+
+      # 2. Code Security Scan
+      - name: Semgrep Scan
+        uses: returntocorp/semgrep-action@v1
+
+      # 3. Docker Build
+      - name: Build Docker Image
         run: docker build -t secure-company-portal .
 
-      - name: Run container (test)
-        run: docker run -d -p 8080:80 secure-company-portal
+      # 4. Trivy Scan
+      - name: Trivy Scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: secure-company-portal
+          format: table
