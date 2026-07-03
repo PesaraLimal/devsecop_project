@@ -1,0 +1,14 @@
+FROM node:18
+
+WORKDIR /app
+
+# Copy the dependencies manifests first to optimize Docker cache layer speeds
+COPY backend/package*.json ./
+RUN npm install
+
+# Copy all the backend application files
+COPY backend/ .
+
+EXPOSE 3000
+
+CMD ["node", "server.js"]

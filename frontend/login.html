@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Consistent header layout -->
     <header class="navbar">
         <div class="logo">
             <strong>Secure<span>Corp</span></strong>
@@ -23,23 +22,16 @@
         </nav>
     </header>
 
-    <!-- Main Content Area -->
     <main class="login-page-main">
         <div class="login-container">
             <h2>Secure Portal Access</h2>
             <p>Please enter your enterprise credentials to access the secure internal dashboard.</p>
 
-            <!-- Error/Success Message box (initially empty) -->
-            <!-- JavaScript will use this container to show feedback to the user. -->
             <div id="login-feedback" class="feedback-message hidden"></div>
 
-            <!-- Login Form -->
-            <!-- We add an ID to reference it in our script.js file. -->
             <form id="login-form">
-                <!-- Grouping inputs for style control -->
                 <div class="form-group">
                     <label for="username">Username</label>
-                    <!-- "required" tag is built-in HTML5 validation ensuring the field is not empty. -->
                     <input type="text" id="username" name="username" placeholder="e.g., admin" required>
                 </div>
 
@@ -48,7 +40,6 @@
                     <input type="password" id="password" name="password" placeholder="••••••••" required>
                 </div>
 
-                <!-- Submit button triggers the form's submit event. -->
                 <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </form>
             
@@ -56,7 +47,6 @@
         </div>
     </main>
 
-    <!-- Consistent Footer layout -->
     <footer>
         <p>&copy; 2026 SecureCorp. All rights reserved. Designed for secure enterprise environments.</p>
     </footer>

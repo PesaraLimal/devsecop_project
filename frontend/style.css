@@ -1,35 +1,22 @@
-/* ==========================================
-   STYLE SHEET FOR SECURE COMPANY PORTAL
-   ========================================== */
-
-/* 
-   1. CSS VARIABLES (DESIGN SYSTEM TOKENS)
-   We use variables to define colors and spacings so that changing the theme in the future is easy.
-   --var-name allows us to reuse the same color code everywhere.
-*/
 :root {
-    --primary: #2563eb;        /* Vibrant corporate blue */
-    --primary-hover: #1d4ed8;  /* Slightly darker blue for buttons when hovered */
-    --bg-light: #f8fafc;       /* Light gray background for readability */
-    --bg-card: #ffffff;        /* Pure white for containers/cards */
-    --text-main: #1e293b;      /* Dark slate gray for main text */
-    --text-muted: #64748b;     /* Lighter gray for secondary text */
-    --border-color: #e2e8f0;   /* Light gray border line */
-    --success: #10b981;        /* Emerald green for success alerts */
-    --error: #ef4444;          /* Soft red for error alerts */
-    --max-width: 1200px;       /* Max width of content container on big screens */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --success: #10b981;
+    --error: #ef4444;
+    --max-width: 1200px;
     --font-family: 'Inter', sans-serif;
-    --transition: all 0.3s ease; /* Default transition speed for micro-animations */
+    --transition: all 0.3s ease;
 }
 
-/* 
-   2. CSS RESET
-   Different browsers have different default margins/paddings. We reset them to zero to make our layout consistent.
-*/
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Ensures padding & borders do not make elements wider than set width */
+    box-sizing: border-box;
 }
 
 body {
@@ -39,28 +26,24 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body occupies at least full screen height */
+    min-height: 100vh;
 }
 
 main {
-    flex: 1; /* Pushes the footer down by taking up all available space in the body grid */
+    flex: 1;
 }
 
-/* 
-   3. NAVIGATION BAR & HEADER
-   We use Flexbox to arrange items horizontally and space them nicely.
-*/
 .navbar {
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 2rem;
     display: flex;
-    justify-content: space-between; /* Pushes logo to the left, links to the right */
-    align-items: center; /* Vertically centers navigation items */
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100; /* Ensures navbar stays above all other content on scroll */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow beneath navbar */
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -69,46 +52,41 @@ main {
 }
 
 .logo span {
-    color: var(--primary); /* Makes the 'Corp' part blue */
+    color: var(--primary);
 }
 
 .navbar nav ul {
-    list-style: none; /* Removes standard bullet points from lists */
+    list-style: none;
     display: flex;
-    gap: 1.5rem; /* Puts modern spacing between list items */
+    gap: 1.5rem;
     align-items: center;
 }
 
 .navbar nav a {
-    text-decoration: none; /* Removes underline from links */
+    text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
     font-size: 0.95rem;
-    transition: var(--transition); /* Smooth transition when user hovers */
+    transition: var(--transition);
 }
 
 .navbar nav a:hover,
 .navbar nav a.active {
-    color: var(--primary); /* Color changes to blue when active or hovered */
+    color: var(--primary);
 }
 
-/* Button style navigation link */
 .btn-login-nav {
     background-color: var(--primary);
-    color: #ffffff !important; /* Forces color to stay white */
+    color: #ffffff !important;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
 }
 
 .btn-login-nav:hover {
     background-color: var(--primary-hover);
-    transform: translateY(-1px); /* Slight bounce up effect */
+    transform: translateY(-1px);
 }
 
-/* 
-   4. HERO SECTION
-   The welcoming banner on our home page.
-*/
 .hero {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     padding: 5rem 2rem;
@@ -118,7 +96,7 @@ main {
 
 .hero-content {
     max-width: 800px;
-    margin: 0 auto; /* Centers the content box */
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -141,9 +119,6 @@ main {
     gap: 1rem;
 }
 
-/* 
-   5. BUTTON STYLES
-*/
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -181,10 +156,6 @@ main {
     font-size: 1rem;
 }
 
-/* 
-   6. FEATURES SECTION
-   A grid display for organizing cards.
-*/
 .features {
     max-width: var(--max-width);
     margin: 4rem auto;
@@ -199,7 +170,7 @@ main {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically places items into columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -212,8 +183,8 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Micro-animation: lifts card on hover */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); /* Adds soft shadow */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
     border-color: var(--primary);
 }
 
@@ -232,9 +203,6 @@ main {
     font-size: 0.95rem;
 }
 
-/* 
-   7. PAGE HEADER & ABOUT SECTION
-*/
 .page-header {
     background: #ffffff;
     border-bottom: 1px solid var(--border-color);
@@ -291,9 +259,6 @@ main {
     color: var(--primary);
 }
 
-/* 
-   8. LOGIN & CONTACT FORMS
-*/
 .login-page-main,
 .contact-page-main {
     display: flex;
@@ -353,8 +318,8 @@ main {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary); /* Border turns blue when user clicks inside */
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); /* Soft blue outer glow */
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 .login-note {
@@ -374,7 +339,6 @@ main {
     font-family: monospace;
 }
 
-/* Dynamic Feedback Box Styling (Success / Error states) */
 .feedback-message {
     padding: 0.75rem 1rem;
     border-radius: 6px;
@@ -397,27 +361,19 @@ main {
 }
 
 .hidden {
-    display: none; /* Hides elements until JavaScript removes this class */
+    display: none;
 }
 
-/* 
-   9. FOOTER
-*/
 footer {
-    background-color: #1e293b; /* Dark slate background */
-    color: #94a3b8; /* Muted gray text color */
+    background-color: #1e293b;
+    color: #94a3b8;
     text-align: center;
     padding: 1.5rem 2rem;
     border-top: 1px solid #334155;
     font-size: 0.85rem;
 }
 
-/* 
-   10. RESPONSIVE DESIGN (MEDIA QUERIES)
-   We use media queries to modify styles when the screen size is small.
-*/
 @media (max-width: 768px) {
-    /* Stack elements vertically instead of side-by-side on mobile devices */
     .navbar {
         flex-direction: column;
         gap: 1rem;
@@ -445,7 +401,7 @@ footer {
     }
 
     .about-grid {
-        grid-template-columns: 1fr; /* Turns 2-column layout into 1-column layout */
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 }
