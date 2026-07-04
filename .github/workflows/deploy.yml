@@ -22,14 +22,24 @@ jobs:
         with:
           config: auto
 
-      # 3. Docker Build
-      - name: Build Docker Image
-        run: docker build -t secure-app .
+      # 3. Build & Scan Backend Image
+      - name: Build Backend Image
+        run: docker build -f Dockerfile.backend -t secure-backend .
 
-      # 4. Trivy Scan
-      - name: Trivy Scan
+      - name: Trivy Scan Backend
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: secure-app
+          image-ref: secure-backend
+          format: table
+          severity: CRITICAL,HIGH
+
+      # 4. Build & Scan Frontend Image
+      - name: Build Frontend Image
+        run: docker build -f Dockerfile.frontend -t secure-frontend .
+
+      - name: Trivy Scan Frontend
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: secure-frontend
           format: table
           severity: CRITICAL,HIGH
