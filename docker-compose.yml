@@ -17,3 +17,5 @@ services:
       dockerfile: Dockerfile.backend
     ports:
       - "3000:3000"
+    volumes:
+      - ./portal.db:/app/portal.db
